@@ -1,5 +1,10 @@
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: -webkit-linear-gradient(left, #e2cfcf 1px, transparent 1px), -webkit-linear-gradient(#8ca6d9 1px, transparent 1px), -webkit-linear-gradient(#cfd6e2 1px, transparent 1px), -webkit-linear-gradient(#f2f2f3 1px, transparent 1px);
+  background-image: -moz-linear-gradient(#8ca6d9 1px, transparent 1px), -moz-linear-gradient(#cfd6e2 1px, transparent 1px), -moz-linear-gradient(#f2f2f3 1px, transparent 1px);
+  background-image: -o-linear-gradient(#8ca6d9 1px, transparent 1px), -o-linear-gradient(#cfd6e2 1px, transparent 1px), -o-linear-gradient(#f2f2f3 1px, transparent 1px);
+  background-image: linear-gradient(#8ca6d9 1px, transparent 1px), linear-gradient(#cfd6e2 1px, transparent 1px), linear-gradient(#f2f2f3 1px, transparent 1px);
+  background-size: 24px 100%, 100% 24px, 100% 12px, 100% 6px;
 }
 body {
   line-height: 24px;
@@ -8,6 +13,8 @@ body {
   margin-top: 6rem;
   margin-left: 48px;
   margin-left: 3rem;
+  margin-right: 48px;
+  margin-right: 3rem;
 }
 body header #workshop-details {
   border-left: 12px solid #ffa500;
