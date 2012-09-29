@@ -1,0 +1,99 @@
+@import PixelParityRems
+
+// These are not necessary as the default line height is 24 pixel parity rems but
+// are here to demonstrate how to override the default.
+baseLineHeight = 24rem
+calculateLineHeightConstants()
+
+html
+	font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+	// font-size 12px
+	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
+
+body
+	line-height baseLineHeight
+	margin-top FourLineHeights
+	margin-left TwoLineHeights
+
+	header
+
+		#workshop-details
+			border-left HalfLineHeight solid orange
+			margin-left - TwoLineHeights
+			padding-left OneAndAHalfLineHeights
+			margin-bottom OneAndAQuarterLineHeights
+
+		h1, a
+			font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+
+		h1
+			font-size TwoLineHeights
+			line-height ThreeLineHeights
+			font-weight 900
+			// Pull up the heading so that it is flush top with the top of the orange accent border.
+			position relative
+			top - ThreeQuartersLineHeight
+
+		.dates, .location
+			font-size OneLineHeight
+			font-weight 600
+
+		.dates
+			line-height OneAndThreeQuartersLineHeights
+
+		.location
+			line-height ThreeQuartersLineHeight
+
+		#workshop-link
+			margin-bottom HalfLineHeight
+			text-transform upperca
+
+		a
+			// display block
+			font-size 26rem
+			text-decoration none
+			padding-bottom 3rem
+			border-bottom 2rem solid orange
+			color orange
+			line-height OneAndAQuarterLineHeights
+
+section[role="main"]
+	margin-top OneAndAHalfLineHeights
+	max-width 576rem
+	text-align justify
+	hyphens(auto)
+
+	h2
+		font-size OneLineHeight
+		line-height OneAndAHalfLineHeights
+		margin-top OneLineHeight
+		margin-bottom HalfLineHeight
+		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+
+	p
+		margin-bottom HalfLineHeight
+
+section[role="aside"]
+	position absolute
+	top OneAndAHalfLineHeights
+	left TwoLineHeights
+	font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+	font-size 26rem
+	line-height OneAndAHalfLineHeights
+	font-weight 800
+	color orange
+
+#subtitle
+	font-weight 400
+	margin-top - ThreeQuartersLineHeight // To compensate for pulled up H1.
+	margin-bottom HalfLineHeight
+
+li
+	// Hanging bullets.
+	text-indent -1em
+	margin-bottom HalfLineHeight
+
+@media only screen and (max-width: 500px)
+	html
+		font-size 12px
+		showBaselineGrid(show: yes, baseFontSize: 12, showQuarterLineHeightMarks: yes)
