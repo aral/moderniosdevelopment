@@ -5,64 +5,67 @@
 baseLineHeight = 24rem
 calculateLineHeightConstants()
 
+// Constants
+kMaxWidthOfMainContent = 576rem
+
 html
 	font-family "Helvetica Neue", Helvetica, Arial, sans-serif
 	// font-size 12px
-	showBaselineGrid(show: yes,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
+	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
 
 body
 	line-height baseLineHeight
 	margin-top FourLineHeights
 	margin-left TwoLineHeights
 	margin-right TwoLineHeights
+	//min-width 320px
 
-	header
+header
 
-		#workshop-details
-			border-left HalfLineHeight solid orange
-			margin-left - TwoLineHeights
-			padding-left OneAndAHalfLineHeights
-			margin-bottom OneAndAQuarterLineHeights
+	#workshop-details
+		border-left HalfLineHeight solid orange
+		margin-left - TwoLineHeights
+		padding-left OneAndAHalfLineHeights
+		margin-bottom OneAndAHalfLineHeights
 
-		h1, a
-			font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+	h1, a
+		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
 
-		h1
-			font-size TwoLineHeights
-			line-height ThreeLineHeights
-			font-weight 900
-			// Pull up the heading so that it is flush top with the top of the orange accent border.
-			position relative
-			top - ThreeQuartersLineHeight
+	h1
+		font-size TwoLineHeights
+		line-height ThreeLineHeights
+		font-weight 900
+		// Pull up the heading so that it is flush top with the top of the orange accent border.
+		position relative
+		top - ThreeQuartersLineHeight
 
-		.dates, .location
-			font-size OneLineHeight
-			font-weight 600
+	.dates, .location
+		font-size OneLineHeight
+		font-weight 600
 
-		.dates
-			line-height OneAndThreeQuartersLineHeights
+	.dates
+		line-height OneAndThreeQuartersLineHeights
+		margin-top - QuarterLineHeight
 
-		.location
-			line-height ThreeQuartersLineHeight
+	.location
+		line-height ThreeQuartersLineHeight
 
-		#workshop-link
-			margin-bottom HalfLineHeight
-			text-transform upperca
+	#workshop-link
+		text-transform uppercase
 
-		a
-			// display block
-			font-size 26rem
-			text-decoration none
-			padding-bottom 3rem
-			border-bottom 2rem solid orange
-			color orange
-			line-height OneAndAQuarterLineHeights
+	a
+		// display block
+		font-size 26rem
+		text-decoration none
+		padding-bottom 3rem
+		border-bottom 2rem solid orange
+		color orange
+		line-height OneAndAQuarterLineHeights
 
 section[role="main"]
 	margin-top OneAndAHalfLineHeights
-	max-width 576rem
-	text-align justify
-	hyphens(auto)
+	max-width kMaxWidthOfMainContent
+	useJustifiedText()
 
 	h2
 		font-size OneLineHeight
@@ -83,18 +86,120 @@ section[role="aside"]
 	line-height OneAndAHalfLineHeights
 	font-weight 800
 	color orange
+	margin-bottom OneLineHeight
+
+section#additional-info
+	position absolute
+	top FourLineHeights
+	left kMaxWidthOfMainContent+FourLineHeights
+	width 10*baseLineHeight
+
+	p
+		font-size HalfLineHeight
+		line-height OneLineHeight
+		//margin-top ThreeQuartersLineHeight
+		margin-top 3rem + ThreeQuartersLineHeight // Where is the 3rem optical adjustment coming from?
+		padding-bottom 3rem
+		useJustifiedText()
+
+	p:first-of-type
+		margin-top 3rem + OneLineHeight
+
+	figure
+		margin-bottom OneLineHeight
+
+		img
+			width 236px
+			margin-bottom 3rem+QuarterLineHeight
+			display block // To remove the space between the image and the figure caption.
+
+	figcaption
+		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+		font-size 14rem
+		line-height OneLineHeight
+		text-align center
+		margin-left -6rem // Optical adjustment to center for image, not image+drop shadow.
+		color orange
+		position relative	// Optical adjustment…
+		top 1px 			// …fix 1px vertical rhythm error.
+
+
+	blockquote
+		border-left QuarterLineHeight solid grey
+		padding-left ThreeQuartersLineHeight
+		margin-bottom OneLineHeight
+		font-size 18rem
+		font-weight 800
+		line-height OneLineHeight
+		useJustifiedText()
+
+		span.quote-byline
+			font-weight 400
+			display block
+			text-align right
+			margin-top OneLineHeight
 
 #subtitle
 	font-weight 400
 	margin-top - ThreeQuartersLineHeight // To compensate for pulled up H1.
 	margin-bottom HalfLineHeight
 
-li
+ul
 	// Hanging bullets.
-	text-indent -1em
+	list-style-type disc
+	list-style-position outside
+
+li
 	margin-bottom HalfLineHeight
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 680px)
+
 	html
-		font-size 12px
-		showBaselineGrid(show: yes, baseFontSize: 12, showQuarterLineHeightMarks: yes)
+		font-size 14px
+
+	section[role="aside"]
+		font-size 1.25em
+
+	header h1
+		line-height TwoLineHeights
+		top - QuarterLineHeight
+
+	#subtitle
+		margin-top QuarterLineHeight
+
+	section#additional-info
+		position static
+		width 100%
+
+		p
+			font-size 1em
+
+
+		figure:before
+			content 'About the instructor'
+			display block
+			font-size OneLineHeight
+			line-height OneAndAHalfLineHeights
+			margin-top OneLineHeight
+			margin-bottom HalfLineHeight
+			font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+
+		figure img
+			width 100%
+
+		figcaption
+			font-size ThreeQuartersLineHeight
+
+@media only screen and (max-width: 480px)
+	html
+		font-size 14px
+		showBaselineGrid(show: no, baseFontSize: 12, showQuarterLineHeightMarks: yes)
+
+
+
+
+
+@media only screen and (max-width: 400px)
+	html
+		font-size 11px
+

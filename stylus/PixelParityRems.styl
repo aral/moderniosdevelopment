@@ -34,6 +34,7 @@ ThreeAndAQuarterLineHeights = baseLineHeight*3.25 rem
 ThreeAndAHalfLineHeights = baseLineHeight*3.5 rem
 ThreeAndThreeQuartersLineHeights = baseLineHeight*3.75 rem
 FourLineHeights = baseLineHeight*4 rem
+FiveLineHeights = baseLineHeight*5 rem
 
 calculateLineHeightConstants()
 	QuarterLineHeight = baseLineHeight/4 rem
@@ -52,7 +53,12 @@ calculateLineHeightConstants()
 	ThreeAndAHalfLineHeights = baseLineHeight*3.5 rem
 	ThreeAndThreeQuartersLineHeights = baseLineHeight*3.75 rem
 	FourLineHeights = baseLineHeight*4 rem
+	FiveLineHeights = baseLineHeight*5 rem
 
+//
+// Displays a baseline grid (optionally with a horizontal grid also set to the base line height)
+// Issue: Not all grid lines appear to draw correctly in Firefox.
+//
 showBaselineGrid(show = yes, baseFontSize = 16, showQuarterLineHeightMarks=no, showHorizontalGrid=no, majorLineColor=hsl(220, 50%, 70%), minorLineColor=hsl(220, 25%, 85%), quarterMarkLineColor=hsl(220, 5%, 95%), horizontalGridColor=hsl(360, 25%, 85%))
 
 	if show == yes
@@ -171,23 +177,34 @@ margin()
 		margin arguments
 
 margin-left(l)
-	if unit(l) == "rem" or unit(l) == ""
+	if l == auto
+		margin-left l
+	else if unit(l) == "rem" or unit(l) == ""
 		margin-left: unit(l, 'px')
 		margin-left: unit(l/16, 'rem')
 	else
 		margin-left: unit(l, unit(l))
 
 margin-right(r)
-	margin-right: unit(r, 'px')
-	margin-right: unit(r/16, 'rem')
+	if r == auto
+		margin-right r
+	else
+		margin-right: unit(r, 'px')
+		margin-right: unit(r/16, 'rem')
 
 margin-top(t)
-	margin-top: unit(t, 'px')
-	margin-top: unit(t/16, 'rem')
+	if t == auto
+		margin-top t
+	else
+		margin-top: unit(t, 'px')
+		margin-top: unit(t/16, 'rem')
 
 margin-bottom(b)
-	margin-bottom: unit(b, 'px')
-	margin-bottom: unit(b/16, 'rem')
+	if b == auto
+		margin-bottom b
+	else
+		margin-bottom: unit(b, 'px')
+		margin-bottom: unit(b/16, 'rem')
 
 /* Padding */
 
@@ -294,6 +311,10 @@ right(value)
 //
 // Typography
 //
+
+useJustifiedText()
+	text-align justify
+	hyphens(auto)
 
 hyphens(value)
 	-webkit-hyphens value
