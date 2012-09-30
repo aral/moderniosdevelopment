@@ -128,6 +128,10 @@ showBaselineGrid(show = yes, baseFontSize = 16, showQuarterLineHeightMarks=no, s
 
 				background-size unit(baseLineHeightInPixels, px) 100%, 100% unit(baseLineHeightInPixels, px), 100% unit(baseLineHeightInPixels/2, px), 100% unit(baseLineHeightInPixels/4, px)
 
+		// In all cases, turn on background repeat in case developer turned it off in HTML
+		// for her own custom background.
+		background-repeat repeat
+
 
 //
 // Requires a variable called rootLineHeight to be set in your styles. If
