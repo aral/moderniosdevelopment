@@ -11,6 +11,8 @@ kMaxWidthOfMainContent = 576rem
 html
 	font-family "Helvetica Neue", Helvetica, Arial, sans-serif
 	// font-size 12px
+	background-image url(/images/iphone-ipad-watermarks.png)
+	background-repeat no-repeat
 	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
 
 body
@@ -19,6 +21,11 @@ body
 	margin-left TwoLineHeights
 	margin-right TwoLineHeights
 	//min-width 320px
+
+a
+	text-decoration none
+	color orange
+	font-weight 800
 
 header
 
@@ -56,10 +63,8 @@ header
 	a
 		// display block
 		font-size 26rem
-		text-decoration none
 		padding-bottom 3rem
 		border-bottom 2rem solid orange
-		color orange
 		line-height OneAndAQuarterLineHeights
 
 section[role="main"]

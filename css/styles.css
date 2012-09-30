@@ -1,5 +1,7 @@
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: url("/images/iphone-ipad-watermarks.png");
+  background-repeat: no-repeat;
 }
 body {
   line-height: 24px;
@@ -10,6 +12,11 @@ body {
   margin-left: 3rem;
   margin-right: 48px;
   margin-right: 3rem;
+}
+a {
+  text-decoration: none;
+  color: #ffa500;
+  font-weight: 800;
 }
 header #workshop-details {
   border-left: 12px solid #ffa500;
@@ -57,12 +64,10 @@ header #workshop-link {
 header a {
   font-size: 26px;
   font-size: 1.625rem;
-  text-decoration: none;
   padding-bottom: 3px;
   padding-bottom: 0.1875rem;
   border-bottom: 2px solid #ffa500;
   border-bottom: 0.125rem solid #ffa500;
-  color: #ffa500;
   line-height: 30px;
   line-height: 1.875rem;
 }
