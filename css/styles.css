@@ -12,6 +12,11 @@ body {
   margin-left: 3rem;
   margin-right: 48px;
   margin-right: 3rem;
+  max-width: 576px;
+  max-width: 36rem;
+}
+strong {
+  font-weight: 800;
 }
 a {
   text-decoration: none;
@@ -82,7 +87,7 @@ section[role="main"] {
   -o-hyphens: auto;
   hyphens: auto;
 }
-section[role="main"] h2 {
+h2 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 36px;
@@ -93,7 +98,7 @@ section[role="main"] h2 {
   margin-bottom: 0.75rem;
   font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
 }
-section[role="main"] p {
+p {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
@@ -117,14 +122,14 @@ section#additional-info {
   position: absolute;
   top: 96px;
   top: 6rem;
-  left: 672px;
-  left: 42rem;
+  left: 696px;
+  left: 43.5rem;
   width: 240px;
   width: 15rem;
 }
 section#additional-info p {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 24px;
   line-height: 1.5rem;
   margin-top: 21px;
@@ -144,9 +149,10 @@ section#additional-info p:first-of-type {
 section#additional-info figure {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 section#additional-info figure img {
-  width: 236px;
+  width: 100%;
   margin-bottom: 9px;
   margin-bottom: 0.5625rem;
   display: block;
@@ -164,7 +170,7 @@ section#additional-info figcaption {
   position: relative;
   top: 1px;
 }
-section#additional-info blockquote {
+blockquote {
   border-left: 6px solid #808080;
   border-left: 0.375rem solid #808080;
   padding-left: 18px;
@@ -181,8 +187,9 @@ section#additional-info blockquote {
   -moz-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+  font-style: italic;
 }
-section#additional-info blockquote span.quote-byline {
+blockquote span.quote-byline {
   font-weight: 400;
   display: block;
   text-align: right;
@@ -195,6 +202,13 @@ section#additional-info blockquote span.quote-byline {
   margin-top: -1.125rem;
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
+}
+iframe {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.highlight {
+  font-weight: 800;
 }
 ul {
   list-style-type: disc;
@@ -248,6 +262,9 @@ li {
     font-size: 18px;
     font-size: 1.125rem;
   }
+}
+section#testimonials blockquote {
+  font-weight: 400;
 }
 @media only screen and (max-width: 480px) {
   html {

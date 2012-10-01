@@ -20,7 +20,10 @@ body
 	margin-top FourLineHeights
 	margin-left TwoLineHeights
 	margin-right TwoLineHeights
-	//min-width 320px
+	max-width kMaxWidthOfMainContent
+
+strong
+	font-weight 800
 
 a
 	text-decoration none
@@ -72,15 +75,15 @@ section[role="main"]
 	max-width kMaxWidthOfMainContent
 	useJustifiedText()
 
-	h2
-		font-size OneLineHeight
-		line-height OneAndAHalfLineHeights
-		margin-top OneLineHeight
-		margin-bottom HalfLineHeight
-		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+h2
+	font-size OneLineHeight
+	line-height OneAndAHalfLineHeights
+	margin-top OneLineHeight
+	margin-bottom HalfLineHeight
+	font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
 
-	p
-		margin-bottom HalfLineHeight
+p
+	margin-bottom HalfLineHeight
 
 section[role="aside"]
 	position absolute
@@ -96,11 +99,11 @@ section[role="aside"]
 section#additional-info
 	position absolute
 	top FourLineHeights
-	left kMaxWidthOfMainContent+FourLineHeights
+	left kMaxWidthOfMainContent+FiveLineHeights
 	width 10*baseLineHeight
 
 	p
-		font-size HalfLineHeight
+		font-size 14rem
 		line-height OneLineHeight
 		//margin-top ThreeQuartersLineHeight
 		margin-top 3rem + ThreeQuartersLineHeight // Where is the 3rem optical adjustment coming from?
@@ -112,11 +115,12 @@ section#additional-info
 
 	figure
 		margin-bottom OneLineHeight
+		width 100%
 
 		// TO-DO: Add Retina version of headshot and size to exactly 10 line heights
 		// ====== (240px — not including the drop shadow.)
 		img
-			width 236px
+			width 100%
 
 			margin-bottom 3rem+QuarterLineHeight
 			display block // To remove the space between the image and the figure caption.
@@ -132,25 +136,33 @@ section#additional-info
 		top 1px 			// …fix 1px vertical rhythm error.
 
 
-	blockquote
-		border-left QuarterLineHeight solid grey
-		padding-left ThreeQuartersLineHeight
-		margin-bottom OneLineHeight
-		font-size 18rem
-		font-weight 800
-		line-height OneLineHeight
-		useJustifiedText()
+blockquote
+	border-left QuarterLineHeight solid grey
+	padding-left ThreeQuartersLineHeight
+	margin-bottom OneLineHeight
+	font-size 18rem
+	font-weight 800
+	line-height OneLineHeight
+	useJustifiedText()
+	font-style italic
 
-		span.quote-byline
-			font-weight 400
-			display block
-			text-align right
-			margin-top OneLineHeight
+	span.quote-byline
+		font-weight 400
+		display block
+		text-align right
+		margin-top OneLineHeight
 
 #subtitle
 	font-weight 400
 	margin-top - ThreeQuartersLineHeight // To compensate for pulled up H1.
 	margin-bottom HalfLineHeight
+
+iframe
+	border 1px solid black
+	box-sizing border-box
+
+.highlight
+	font-weight 800
 
 ul
 	// Hanging bullets.
@@ -198,14 +210,15 @@ li
 		figcaption
 			font-size ThreeQuartersLineHeight
 
+section#testimonials
+
+	blockquote
+		font-weight 400
+
 @media only screen and (max-width: 480px)
 	html
 		font-size 14px
 		showBaselineGrid(show: no, baseFontSize: 12, showQuarterLineHeightMarks: yes)
-
-
-
-
 
 @media only screen and (max-width: 400px)
 	html
