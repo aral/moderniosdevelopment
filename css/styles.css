@@ -20,12 +20,12 @@ strong {
 }
 a {
   text-decoration: none;
-  color: #ffa500;
+  color: #e94437;
   font-weight: 800;
 }
 header #workshop-details {
-  border-left: 12px solid #ffa500;
-  border-left: 0.75rem solid #ffa500;
+  border-left: 12px solid #e94437;
+  border-left: 0.75rem solid #e94437;
   margin-left: -48px;
   margin-left: -3rem;
   padding-left: 36px;
@@ -75,8 +75,8 @@ header a {
   font-size: 1.625rem;
   padding-bottom: 3px;
   padding-bottom: 0.1875rem;
-  border-bottom: 2px solid #ffa500;
-  border-bottom: 0.125rem solid #ffa500;
+  border-bottom: 2px solid #e94437;
+  border-bottom: 0.125rem solid #e94437;
   line-height: 30px;
   line-height: 1.875rem;
 }
@@ -90,6 +90,9 @@ section[role="main"] {
   -moz-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+}
+section[role="main"] h2:first-of-type {
+  display: none;
 }
 h2 {
   font-size: 24px;
@@ -106,7 +109,7 @@ p {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
-section[role="aside"] {
+div[role="aside"] {
   position: absolute;
   top: 36px;
   top: 2.25rem;
@@ -118,11 +121,11 @@ section[role="aside"] {
   line-height: 36px;
   line-height: 2.25rem;
   font-weight: 800;
-  color: #ffa500;
+  color: #e94437;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-section#additional-info {
+section#about-the-instructor {
   position: absolute;
   top: 96px;
   top: 6rem;
@@ -131,7 +134,19 @@ section#additional-info {
   width: 240px;
   width: 15rem;
 }
-section#additional-info p {
+section#about-the-instructor h2 {
+  display: none;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 36px;
+  line-height: 2.25rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
+}
+section#about-the-instructor p {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 24px;
@@ -146,22 +161,22 @@ section#additional-info p {
   -o-hyphens: auto;
   hyphens: auto;
 }
-section#additional-info p:first-of-type {
+section#about-the-instructor p:first-of-type {
   margin-top: 27px;
   margin-top: 1.6875rem;
 }
-section#additional-info figure {
+section#about-the-instructor figure {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
   width: 100%;
 }
-section#additional-info figure img {
+section#about-the-instructor figure img {
   width: 100%;
   margin-bottom: 9px;
   margin-bottom: 0.5625rem;
   display: block;
 }
-section#additional-info figcaption {
+section#about-the-instructor figcaption {
   font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -170,7 +185,6 @@ section#additional-info figcaption {
   text-align: center;
   margin-left: -6px;
   margin-left: -0.375rem;
-  color: #ffa500;
   position: relative;
   top: 1px;
 }
@@ -224,6 +238,16 @@ li {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
+section#testimonials p:first-of-type {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+section#testimonials blockquote {
+  font-weight: 400;
+}
+section#testimonials .quote-byline {
+  font-weight: 800;
+}
 @media only screen and (max-width: 680px) {
   html {
     font-size: 14px;
@@ -241,43 +265,25 @@ li {
     margin-top: 6px;
     margin-top: 0.375rem;
   }
-  section#additional-info {
+  section#about-the-instructor {
     position: static;
     width: 100%;
   }
-  section#additional-info p {
+  section#about-the-instructor p {
     font-size: 1em;
   }
-  section#additional-info figure:before {
-    content: 'About the instructor';
+  section#about-the-instructor h2 {
     display: block;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 36px;
-    line-height: 2.25rem;
-    margin-top: 24px;
-    margin-top: 1.5rem;
-    margin-bottom: 12px;
-    margin-bottom: 0.75rem;
-    font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
+    margin-top: 36px;
+    margin-top: 2.25rem;
   }
-  section#additional-info figure img {
+  section#about-the-instructor figure img {
     width: 100%;
   }
-  section#additional-info figcaption {
+  section#about-the-instructor figcaption {
     font-size: 18px;
     font-size: 1.125rem;
   }
-}
-section#testimonials p:first-of-type {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-section#testimonials blockquote {
-  font-weight: 400;
-}
-section#testimonials .quote-byline {
-  font-weight: 800;
 }
 @media only screen and (max-width: 480px) {
   html {

@@ -7,6 +7,13 @@ calculateLineHeightConstants()
 
 // Constants
 kMaxWidthOfMainContent = 576rem
+kAccentColor = rgb(233, 68, 55)
+
+//////////////////////////////////////////////////////////////////////
+//
+// Element selectors (low specificity)
+//
+//////////////////////////////////////////////////////////////////////
 
 html
 	font-family "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -27,13 +34,14 @@ strong
 
 a
 	text-decoration none
-	color orange
+	color kAccentColor
 	font-weight 800
 
-header
 
+
+header
 	#workshop-details
-		border-left HalfLineHeight solid orange
+		border-left HalfLineHeight solid kAccentColor
 		margin-left - TwoLineHeights
 		padding-left OneAndAHalfLineHeights
 		margin-bottom OneAndAHalfLineHeights
@@ -75,13 +83,18 @@ header
 		// display block
 		font-size 26rem
 		padding-bottom 3rem
-		border-bottom 2rem solid orange
+		border-bottom 2rem solid kAccentColor
 		line-height OneAndAQuarterLineHeights
 
 section[role="main"]
 	margin-top OneAndAHalfLineHeights
 	max-width kMaxWidthOfMainContent
 	useJustifiedText()
+
+	// I want this heading in there so that we have a meaningful document outline, but
+	// I don’t want it to be visible for aesthetic reasons.
+	h2:first-of-type
+		display: none
 
 h2
 	font-size OneLineHeight
@@ -93,7 +106,7 @@ h2
 p
 	margin-bottom HalfLineHeight
 
-section[role="aside"]
+div[role="aside"]
 	position absolute
 	top OneAndAHalfLineHeights
 	left TwoLineHeights
@@ -101,14 +114,26 @@ section[role="aside"]
 	font-size 26rem
 	line-height OneAndAHalfLineHeights
 	font-weight 800
-	color orange
+	color kAccentColor
 	margin-bottom OneLineHeight
 
-section#additional-info
+section#about-the-instructor
 	position absolute
 	top FourLineHeights
 	left kMaxWidthOfMainContent+FiveLineHeights
 	width 10*baseLineHeight
+
+	h2
+		// By default, do not display the heading when in the sidebar (default).
+		// (This will be overriden when the content is displayed as part of the
+		//  one‐column flow.)
+		display: none
+		font-size OneLineHeight
+		line-height OneAndAHalfLineHeights
+		margin-top OneLineHeight
+		margin-bottom HalfLineHeight
+		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+
 
 	p
 		font-size 14rem
@@ -139,7 +164,7 @@ section#additional-info
 		line-height OneLineHeight
 		text-align center
 		margin-left -6rem // Optical adjustment to center for image, not image+drop shadow.
-		color orange
+		// color kAccentColor
 		position relative	// Optical adjustment…
 		top 1px 			// …fix 1px vertical rhythm error.
 
@@ -181,6 +206,21 @@ ul
 li
 	margin-bottom HalfLineHeight
 
+section#testimonials
+	p:first-of-type
+		margin-bottom OneLineHeight
+	blockquote
+		font-weight 400
+		// margin-bottom OneAndAHalfLineHeights
+	.quote-byline
+		font-weight 800
+
+//////////////////////////////////////////////////////////////////////
+//
+// Media queries
+//
+//////////////////////////////////////////////////////////////////////
+
 @media only screen and (max-width: 680px)
 
 	html
@@ -196,37 +236,22 @@ li
 	#subtitle
 		margin-top QuarterLineHeight
 
-	section#additional-info
+	section#about-the-instructor
 		position static
 		width 100%
 
 		p
 			font-size 1em
 
-
-		figure:before
-			content 'About the instructor'
+		h2
 			display block
-			font-size OneLineHeight
-			line-height OneAndAHalfLineHeights
-			margin-top OneLineHeight
-			margin-bottom HalfLineHeight
-			font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+			margin-top OneAndAHalfLineHeights
 
 		figure img
 			width 100%
 
 		figcaption
 			font-size ThreeQuartersLineHeight
-
-section#testimonials
-	p:first-of-type
-		margin-bottom OneLineHeight
-	blockquote
-		font-weight 400
-		// margin-bottom OneAndAHalfLineHeights
-	.quote-byline
-		font-weight 800
 
 @media only screen and (max-width: 480px)
 	html
