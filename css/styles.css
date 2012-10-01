@@ -47,6 +47,10 @@ header h1 {
   top: -18px;
   top: -1.125rem;
 }
+header p {
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+}
 header .dates,
 header .location {
   font-size: 24px;
@@ -204,6 +208,8 @@ blockquote span.quote-byline {
   margin-bottom: 0.75rem;
 }
 iframe {
+  margin-top: 18px;
+  margin-top: 1.125rem;
   border: 1px solid #000;
   box-sizing: border-box;
 }
@@ -263,8 +269,15 @@ li {
     font-size: 1.125rem;
   }
 }
+section#testimonials p:first-of-type {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
 section#testimonials blockquote {
   font-weight: 400;
+}
+section#testimonials .quote-byline {
+  font-weight: 800;
 }
 @media only screen and (max-width: 480px) {
   html {

@@ -49,6 +49,14 @@ header
 		position relative
 		top - ThreeQuartersLineHeight
 
+	p
+		// For some reason this affects the space between the location and dates divs
+		// although neither is enclosed in a paragraphy tag.
+		//
+		// TODO: Find out why this is.
+		//
+		margin-bottom 0
+
 	.dates, .location
 		font-size OneLineHeight
 		font-weight 600
@@ -158,6 +166,7 @@ blockquote
 	margin-bottom HalfLineHeight
 
 iframe
+	margin-top ThreeQuartersLineHeight
 	border 1px solid black
 	box-sizing border-box
 
@@ -211,9 +220,13 @@ li
 			font-size ThreeQuartersLineHeight
 
 section#testimonials
-
+	p:first-of-type
+		margin-bottom OneLineHeight
 	blockquote
 		font-weight 400
+		// margin-bottom OneAndAHalfLineHeights
+	.quote-byline
+		font-weight 800
 
 @media only screen and (max-width: 480px)
 	html
