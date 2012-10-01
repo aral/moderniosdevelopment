@@ -5,9 +5,17 @@
 baseLineHeight = 24rem
 calculateLineHeightConstants()
 
+//////////////////////////////////////////////////////////////////////
+//
 // Constants
+//
+//////////////////////////////////////////////////////////////////////
+
 kMaxWidthOfMainContent = 576rem
+
+// Striking red, sampled from Music app’s icon.
 kAccentColor = rgb(233, 68, 55)
+
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -37,7 +45,63 @@ a
 	color kAccentColor
 	font-weight 800
 
+h2
+	font-size OneLineHeight
+	line-height OneAndAHalfLineHeights
+	margin-top OneLineHeight
+	margin-bottom HalfLineHeight
+	font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
 
+p
+	margin-bottom HalfLineHeight
+
+ul
+	// Hanging bullets.
+	list-style-type disc
+	list-style-position outside
+
+li
+	margin-bottom HalfLineHeight
+
+blockquote
+	border-left QuarterLineHeight solid grey
+	padding-left ThreeQuartersLineHeight
+	margin-bottom OneLineHeight
+	font-size 18rem
+	font-weight 800
+	line-height OneLineHeight
+	useJustifiedText()
+	font-style italic
+
+	span.quote-byline
+		font-weight 400
+		display block
+		text-align right
+		margin-top OneLineHeight
+
+iframe
+	// Currently used only for the map.
+	margin-top ThreeQuartersLineHeight
+	border 1px solid black
+	box-sizing border-box
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Generic classes.
+//
+//////////////////////////////////////////////////////////////////////
+
+
+.highlight
+	font-weight 800
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Sections and other higher specificity selectors.
+//
+//////////////////////////////////////////////////////////////////////
 
 header
 	#workshop-details
@@ -86,6 +150,7 @@ header
 		border-bottom 2rem solid kAccentColor
 		line-height OneAndAQuarterLineHeights
 
+
 section[role="main"]
 	margin-top OneAndAHalfLineHeights
 	max-width kMaxWidthOfMainContent
@@ -96,15 +161,6 @@ section[role="main"]
 	h2:first-of-type
 		display: none
 
-h2
-	font-size OneLineHeight
-	line-height OneAndAHalfLineHeights
-	margin-top OneLineHeight
-	margin-bottom HalfLineHeight
-	font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
-
-p
-	margin-bottom HalfLineHeight
 
 div[role="aside"]
 	position absolute
@@ -116,6 +172,7 @@ div[role="aside"]
 	font-weight 800
 	color kAccentColor
 	margin-bottom OneLineHeight
+
 
 section#about-the-instructor
 	position absolute
@@ -133,7 +190,6 @@ section#about-the-instructor
 		margin-top OneLineHeight
 		margin-bottom HalfLineHeight
 		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
-
 
 	p
 		font-size 14rem
@@ -169,42 +225,11 @@ section#about-the-instructor
 		top 1px 			// …fix 1px vertical rhythm error.
 
 
-blockquote
-	border-left QuarterLineHeight solid grey
-	padding-left ThreeQuartersLineHeight
-	margin-bottom OneLineHeight
-	font-size 18rem
-	font-weight 800
-	line-height OneLineHeight
-	useJustifiedText()
-	font-style italic
-
-	span.quote-byline
-		font-weight 400
-		display block
-		text-align right
-		margin-top OneLineHeight
-
 #subtitle
 	font-weight 400
 	margin-top - ThreeQuartersLineHeight // To compensate for pulled up H1.
 	margin-bottom HalfLineHeight
 
-iframe
-	margin-top ThreeQuartersLineHeight
-	border 1px solid black
-	box-sizing border-box
-
-.highlight
-	font-weight 800
-
-ul
-	// Hanging bullets.
-	list-style-type disc
-	list-style-position outside
-
-li
-	margin-bottom HalfLineHeight
 
 section#testimonials
 	p:first-of-type
