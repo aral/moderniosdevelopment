@@ -78,6 +78,15 @@ iframe {
   border: 1px solid #000;
   box-sizing: border-box;
 }
+footer {
+  margin-top: 48px;
+  margin-top: 3rem;
+  border-top: 1px solid #000;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
 .highlight {
   font-weight: 800;
 }
@@ -170,8 +179,8 @@ div[role="aside"] {
 }
 section#about-the-instructor {
   position: absolute;
-  top: 96px;
-  top: 6rem;
+  top: 102px;
+  top: 6.375rem;
   left: 696px;
   left: 43.5rem;
   width: 240px;
@@ -194,10 +203,8 @@ section#about-the-instructor p {
   font-size: 0.875rem;
   line-height: 24px;
   line-height: 1.5rem;
-  margin-top: 21px;
-  margin-top: 1.3125rem;
-  padding-bottom: 3px;
-  padding-bottom: 0.1875rem;
+  margin-top: 18px;
+  margin-top: 1.125rem;
   text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -205,8 +212,8 @@ section#about-the-instructor p {
   hyphens: auto;
 }
 section#about-the-instructor p:first-of-type {
-  margin-top: 27px;
-  margin-top: 1.6875rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 section#about-the-instructor figure {
   margin-bottom: 24px;
@@ -215,8 +222,8 @@ section#about-the-instructor figure {
 }
 section#about-the-instructor figure img {
   width: 100%;
-  margin-bottom: 9px;
-  margin-bottom: 0.5625rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   display: block;
 }
 section#about-the-instructor figcaption {
@@ -247,6 +254,10 @@ section#testimonials blockquote {
 }
 section#testimonials .quote-byline {
   font-weight: 800;
+}
+#staticGoogleMapOfVenue {
+  border: 1px solid #000;
+  width: 100%;
 }
 @media only screen and (max-width: 680px) {
   html {

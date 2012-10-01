@@ -58,8 +58,12 @@
 			<h2>Venue</h2>
 			<p>The workshop takes place in the airy Conference Room at Lighthouse. The room comfortably seats 12, benefits from natural light, and boasts the best projector in the building.</p>
 			<p>Tea, coffee, and biscuits are provided throughout the day.</p>
-			<iframe width="100%" height="384" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Arts,+Brighton&amp;aq=0&amp;oq=lighthouse+arts&amp;sll=52.8382,-2.327815&amp;sspn=6.532249,21.643066&amp;ie=UTF8&amp;hq=Lighthouse+Arts,&amp;hnear=Brighton,+The+City+of+Brighton+and+Hove,+United+Kingdom&amp;t=m&amp;ll=50.828046,-0.137951&amp;spn=0.005205,0.01236&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+			<div id="map">
+				<a href="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Arts,+Brighton&amp;aq=0&amp;oq=lighthouse+arts&amp;sll=52.8382,-2.327815&amp;sspn=6.532249,21.643066&amp;ie=UTF8&amp;hq=Lighthouse+Arts,&amp;hnear=Brighton,+The+City+of+Brighton+and+Hove,+United+Kingdom&amp;t=m&amp;ll=50.828046,-0.137951&amp;spn=0.005205,0.01236&amp;z=16&amp;iwloc=A&amp;"><img id='staticGoogleMapOfVenue' src="http://maps.google.com/maps/api/staticmap?center=50.827328,-0.138080&amp;zoom=16&amp;markers=Lighthouse+28 Kensington Street Brighton BN1 4AJ&amp;size=574x322&amp;sensor=false&amp;key=AIzaSyDuzTjgzU7hAahSCFq7K57sGKnO6t_4bSQ"></a>
+			</div>
+
 		</section>
+
 		<section id="about-the-instructor">
 			<h2>About the instructor</h2>
 			<figure>
@@ -94,7 +98,21 @@
 			<p><a href="http://eventbrite.com/moderniosdevelopmentworkshopinbrighton/">Sign up now to reserve your place.</a></p>
 		</section>
 		<footer>
-
+			<p>Modern iOS Development&trade; is a trademark of Aral Balkan. This workshop is organised and run by Naklab Limited. Copyright &copy; 2012 Aral Balkan. All Rights Reserved.</p>
 		</footer>
+		<script type="text/javascript">
+			//
+			// Fortunately, since Google doesn’t have enough money to make embedded maps
+			// work correctly on touch devices (i.e., stop stealing touches and messing up
+			// scrolling), Aral with his billions and legions of developers will step in
+			// to save the day by replacing it with a non‐interactive version on touch
+			// devices. Taaadaaaa, etc.!
+			//
+			if( !('ontouchstart' in document.documentElement) ) {
+				var map = document.getElementById("map");
+				//map.innerHTML = "<img id='staticGoogleMapOfVenue' src='http://maps.google.com/maps/api/staticmap?center=50.827328,-0.138080&zoom=16&markers=Lighthouse+28 Kensington Street Brighton BN1 4AJ&size=1150x766&sensor=false&key=AIzaSyDuzTjgzU7hAahSCFq7K57sGKnO6t_4bSQ'>";
+				map.innerHTML = '<iframe width="100%" height="384" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Arts,+Brighton&amp;aq=0&amp;oq=lighthouse+arts&amp;sll=52.8382,-2.327815&amp;sspn=6.532249,21.643066&amp;ie=UTF8&amp;hq=Lighthouse+Arts,&amp;hnear=Brighton,+The+City+of+Brighton+and+Hove,+United+Kingdom&amp;t=m&amp;ll=50.828046,-0.137951&amp;spn=0.005205,0.01236&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>';
+			}
+		</script>
 	</body>
 </html>

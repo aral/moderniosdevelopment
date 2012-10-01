@@ -85,6 +85,11 @@ iframe
 	border 1px solid black
 	box-sizing border-box
 
+footer
+	margin-top TwoLineHeights
+	border-top 1px solid black
+	padding-top OneLineHeight
+	font-size 14rem
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -176,7 +181,7 @@ div[role="aside"]
 
 section#about-the-instructor
 	position absolute
-	top FourLineHeights
+	top 4.25 * baseLineHeight
 	left kMaxWidthOfMainContent+FiveLineHeights
 	width 10*baseLineHeight
 
@@ -184,7 +189,7 @@ section#about-the-instructor
 		// By default, do not display the heading when in the sidebar (default).
 		// (This will be overriden when the content is displayed as part of the
 		//  one‐column flow.)
-		display: none
+		display none
 		font-size OneLineHeight
 		line-height OneAndAHalfLineHeights
 		margin-top OneLineHeight
@@ -195,12 +200,11 @@ section#about-the-instructor
 		font-size 14rem
 		line-height OneLineHeight
 		//margin-top ThreeQuartersLineHeight
-		margin-top 3rem + ThreeQuartersLineHeight // Where is the 3rem optical adjustment coming from?
-		padding-bottom 3rem
+		margin-top ThreeQuartersLineHeight // Where is the 3rem optical adjustment coming from?
 		useJustifiedText()
 
 	p:first-of-type
-		margin-top 3rem + OneLineHeight
+		margin-top OneLineHeight
 
 	figure
 		margin-bottom OneLineHeight
@@ -210,8 +214,7 @@ section#about-the-instructor
 		// ====== (240px — not including the drop shadow.)
 		img
 			width 100%
-
-			margin-bottom 3rem+QuarterLineHeight
+			margin-bottom QuarterLineHeight
 			display block // To remove the space between the image and the figure caption.
 
 	figcaption
@@ -239,6 +242,10 @@ section#testimonials
 		// margin-bottom OneAndAHalfLineHeights
 	.quote-byline
 		font-weight 800
+
+#staticGoogleMapOfVenue
+	border 1px solid black
+	width 100%
 
 //////////////////////////////////////////////////////////////////////
 //
