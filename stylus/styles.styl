@@ -31,6 +31,7 @@ html
 	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
 	font-size 16px
 
+
 body
 	line-height baseLineHeight
 	margin-top FourLineHeights
@@ -166,7 +167,12 @@ header
 section[role="main"]
 	margin-top OneAndAHalfLineHeights
 	max-width kMaxWidthOfMainContent
-	useJustifiedText()
+
+	p, li
+		useJustifiedText()
+
+	h2
+		text-align left
 
 	// I want this heading in there so that we have a meaningful document outline, but
 	// I don’t want it to be visible for aesthetic reasons.
@@ -222,7 +228,9 @@ section#about-the-instructor
 		img
 			width 100%
 			margin-bottom QuarterLineHeight
+			border 1px solid black
 			display block // To remove the space between the image and the figure caption.
+			box-sizing border-box
 
 	figcaption
 		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif

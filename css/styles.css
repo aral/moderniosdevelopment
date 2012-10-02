@@ -160,11 +160,17 @@ section[role="main"] {
   margin-top: 2.25rem;
   max-width: 576px;
   max-width: 36rem;
+}
+section[role="main"] p,
+section[role="main"] li {
   text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+}
+section[role="main"] h2 {
+  text-align: left;
 }
 section[role="main"] h2:first-of-type {
   display: none;
@@ -232,7 +238,9 @@ section#about-the-instructor figure img {
   width: 100%;
   margin-bottom: 6px;
   margin-bottom: 0.375rem;
+  border: 1px solid #000;
   display: block;
+  box-sizing: border-box;
 }
 section#about-the-instructor figcaption {
   font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
