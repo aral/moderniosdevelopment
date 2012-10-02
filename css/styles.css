@@ -268,6 +268,8 @@ section#testimonials .quote-byline {
   border: 1px solid #000;
   width: 100%;
 }
+@media only screen and (max-device-width: 1024px) {
+}
 @media only screen and (max-width: 1024px) {
   html {
     background-position: -200px 0px;
