@@ -2,6 +2,7 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-image: url("/images/iphone-ipad-watermarks.png");
   background-repeat: no-repeat;
+  font-size: 16px;
 }
 body {
   line-height: 24px;
@@ -107,16 +108,23 @@ header a {
 header h1 {
   font-size: 48px;
   font-size: 3rem;
-  line-height: 72px;
-  line-height: 4.5rem;
+  line-height: 48px;
+  line-height: 3rem;
   font-weight: 900;
   position: relative;
-  top: -18px;
-  top: -1.125rem;
+  top: -6px;
+  top: -0.375rem;
 }
 header p {
   margin-bottom: 0px;
   margin-bottom: 0rem;
+}
+header #subtitle {
+  font-weight: 400;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 header .dates,
 header .location {
@@ -161,7 +169,7 @@ section[role="main"] {
 section[role="main"] h2:first-of-type {
   display: none;
 }
-div[role="aside"] {
+#at-a-glance {
   position: absolute;
   top: 36px;
   top: 2.25rem;
@@ -238,13 +246,6 @@ section#about-the-instructor figcaption {
   position: relative;
   top: 1px;
 }
-#subtitle {
-  font-weight: 400;
-  margin-top: -18px;
-  margin-top: -1.125rem;
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
-}
 section#testimonials p:first-of-type {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
@@ -258,6 +259,29 @@ section#testimonials .quote-byline {
 #staticGoogleMapOfVenue {
   border: 1px solid #000;
   width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  html {
+    background-position: -200px 0px;
+  }
+  body {
+    width: 384px;
+    width: 24rem;
+  }
+  section#about-the-instructor {
+    left: 480px;
+    left: 30rem;
+    margin-right: 96px;
+    margin-right: 6rem;
+  }
+  section#about-the-instructor blockquote {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+  #at-a-glance {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 @media only screen and (max-width: 680px) {
   html {
@@ -304,5 +328,11 @@ section#testimonials .quote-byline {
 @media only screen and (max-width: 400px) {
   html {
     font-size: 11px;
+  }
+  section#about-the-instructor blockquote {
+    font-size: 1em;
+  }
+  #at-a-glance {
+    font-size: 1.4em;
   }
 }

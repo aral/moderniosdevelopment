@@ -26,9 +26,10 @@ kAccentColor = rgb(233, 68, 55)
 html
 	font-family "Helvetica Neue", Helvetica, Arial, sans-serif
 	// font-size 12px
-	background-image url(/images/iphone-ipad-watermarks.png)
+	background-image url('/images/iphone-ipad-watermarks.png')
 	background-repeat no-repeat
 	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
+	font-size 16px
 
 body
 	line-height baseLineHeight
@@ -120,11 +121,11 @@ header
 
 	h1
 		font-size TwoLineHeights
-		line-height ThreeLineHeights
+		line-height TwoLineHeights
 		font-weight 900
 		// Pull up the heading so that it is flush top with the top of the orange accent border.
 		position relative
-		top - ThreeQuartersLineHeight
+		top - QuarterLineHeight
 
 	p
 		// For some reason this affects the space between the location and dates divs
@@ -133,6 +134,12 @@ header
 		// TODO: Find out why this is.
 		//
 		margin-bottom 0
+
+	#subtitle
+		font-weight 400
+		margin-top QuarterLineHeight // To compensate for pulled up H1.
+		margin-bottom HalfLineHeight
+
 
 	.dates, .location
 		font-size OneLineHeight
@@ -167,7 +174,7 @@ section[role="main"]
 		display: none
 
 
-div[role="aside"]
+#at-a-glance
 	position absolute
 	top OneAndAHalfLineHeights
 	left TwoLineHeights
@@ -228,12 +235,6 @@ section#about-the-instructor
 		top 1px 			// …fix 1px vertical rhythm error.
 
 
-#subtitle
-	font-weight 400
-	margin-top - ThreeQuartersLineHeight // To compensate for pulled up H1.
-	margin-bottom HalfLineHeight
-
-
 section#testimonials
 	p:first-of-type
 		margin-bottom OneLineHeight
@@ -253,10 +254,32 @@ section#testimonials
 //
 //////////////////////////////////////////////////////////////////////
 
+@media only screen and (max-width: 1024px)
+	html
+		// background-image url('/images/iphone-ipad-watermarks_01.png'), url('/images/iphone-ipad-watermarks_02.png'), url('/images/iphone-ipad-watermarks_03.png'), url('/images/iphone-ipad-watermarks_04.png')
+		//background-size 2310px 3580px
+
+		// Note, 555px = 1155px (full width) - 600px offset due to offset of first image.
+		// background-position -600px 0px, 555px 0px, -600px 1790px, 555px 1790px
+
+		background-position -200px 0px
+	body
+		width baseLineHeight*16
+
+	section#about-the-instructor
+		left baseLineHeight*16+FourLineHeights
+		margin-right FourLineHeights
+		blockquote
+			font-size HalfLineHeight
+
+	#at-a-glance
+		font-size ThreeQuartersLineHeight
+
 @media only screen and (max-width: 680px)
 
 	html
 		font-size 14px
+		showBaselineGrid(show: no, baseFontSize: 14, showQuarterLineHeightMarks: yes)
 
 	section[role="aside"]
 		font-size 1.25em
@@ -288,9 +311,19 @@ section#testimonials
 @media only screen and (max-width: 480px)
 	html
 		font-size 14px
-		showBaselineGrid(show: no, baseFontSize: 12, showQuarterLineHeightMarks: yes)
+		showBaselineGrid(show: no, baseFontSize: 14, showQuarterLineHeightMarks: yes)
+
+
 
 @media only screen and (max-width: 400px)
 	html
 		font-size 11px
+		showBaselineGrid(show: no, baseFontSize: 11, showQuarterLineHeightMarks: yes)
+
+	section#about-the-instructor blockquote
+		font-size 1em
+
+	#at-a-glance
+		font-size 1.4em
+
 
