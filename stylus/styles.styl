@@ -53,6 +53,15 @@ h2
 	margin-top OneLineHeight
 	margin-bottom HalfLineHeight
 	font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+	color white
+	background-color black
+	padding-left HalfLineHeight
+	margin-left - HalfLineHeight
+	padding-right HalfLineHeight
+	margin-right - HalfLineHeight
+	// box-shadow 	-5px 0 0 0 hsl(0, 0%, 50%), -10px 0 0 0 hsl(0, 0%, 75%), -15px 0 0 0 hsl(0, 0%, 87.5%), -20px 0 0 0 hsl(0, 0%, 93.75%), 5px 0 0 0 hsl(0, 0%, 50%), 10px 0 0 0 hsl(0, 0%, 75%), 15px 0 0 0 hsl(0, 0%, 87.5%), 20px 0 0 0 hsl(0, 0%, 93.75%)
+
+
 
 p
 	margin-bottom HalfLineHeight
@@ -64,6 +73,25 @@ ul
 
 li
 	margin-bottom HalfLineHeight
+
+figure
+	border 1px solid black
+	max-width 100%
+	margin-bottom OneLineHeight
+	margin-top OneLineHeight
+
+	img
+		display block
+		max-width 100%
+		// margin-bottom HalfLineHeight
+		// margin-top HalfLineHeight
+
+figcaption
+	color white
+	background-color black
+	font-size HalfLineHeight
+	text-align center
+
 
 blockquote
 	border-left QuarterLineHeight solid grey
@@ -81,11 +109,10 @@ blockquote
 		text-align right
 		margin-top OneLineHeight
 
-iframe
-	// Currently used only for the map.
-	margin-top ThreeQuartersLineHeight
-	border 1px solid black
-	box-sizing border-box
+iframe.twitter-tweet
+	display inline !important
+	border 0 !important
+	width 100%
 
 footer
 	margin-top TwoLineHeights
@@ -103,6 +130,8 @@ footer
 .highlight
 	font-weight 800
 
+.first-quote
+	margin-top OneLineHeight
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -180,6 +209,14 @@ section[role="main"]
 		display: none
 
 
+
+#venue-map
+	// Currently used only for the map.
+	margin-top ThreeQuartersLineHeight
+	border 1px solid black
+	box-sizing border-box
+
+
 #at-a-glance
 	position absolute
 	top OneAndAHalfLineHeights
@@ -219,28 +256,14 @@ section#about-the-instructor
 	p:first-of-type
 		margin-top OneLineHeight
 
-	figure
-		margin-bottom OneLineHeight
+	// TO-DO: Add Retina version of headshot and size to exactly 10 line heights
+	// ====== (240px — not including the drop shadow.)
+	img
 		width 100%
-
-		// TO-DO: Add Retina version of headshot and size to exactly 10 line heights
-		// ====== (240px — not including the drop shadow.)
-		img
-			width 100%
-			margin-bottom QuarterLineHeight
-			border 1px solid black
-			display block // To remove the space between the image and the figure caption.
-			box-sizing border-box
-
-	figcaption
-		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
-		font-size 14rem
-		line-height OneLineHeight
-		text-align center
-		margin-left -6rem // Optical adjustment to center for image, not image+drop shadow.
-		// color kAccentColor
-		position relative	// Optical adjustment…
-		top 1px 			// …fix 1px vertical rhythm error.
+		border 1px solid black
+		display block // To remove the space between the image and the figure caption.
+		box-sizing border-box
+		margin-bottom OneLineHeight
 
 
 section#testimonials
@@ -318,11 +341,10 @@ section#testimonials
 			display block
 			margin-top OneAndAHalfLineHeights
 
-		figure img
+		img
 			width 100%
+			border 1px solid black
 
-		figcaption
-			font-size ThreeQuartersLineHeight
 
 @media only screen and (max-width: 480px)
 	html
