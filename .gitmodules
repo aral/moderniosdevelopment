@@ -1,0 +1,3 @@
+[submodule "stylus/pixel-parity-rems"]
+	path = stylus/pixel-parity-rems
+	url = https://github.com/aral/pixel-parity-rems.git
