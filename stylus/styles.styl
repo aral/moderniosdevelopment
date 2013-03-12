@@ -1,4 +1,4 @@
-@import PixelParityRems
+@import pixel-parity-rems
 
 // These are not necessary as the default line height is 24 pixel parity rems but
 // are here to demonstrate how to override the default.
@@ -28,7 +28,7 @@ html
 	// font-size 12px
 	background-image url('/images/iphone-ipad-watermarks.png')
 	background-repeat no-repeat
-	showBaselineGrid(show: no,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
+	showBaselineGrid(show: yes,,,showQuarterLineHeightMarks: yes, showHorizontalGrid: yes)
 	font-size 16px
 
 
@@ -85,8 +85,6 @@ figure
 	img
 		display block
 		max-width 100%
-		// margin-bottom HalfLineHeight
-		// margin-top HalfLineHeight
 
 figcaption
 	color white
@@ -292,21 +290,8 @@ section#testimonials
 //////////////////////////////////////////////////////////////////////
 
 
-@media only screen and (max-device-width: 1024px)
-	// OK, this is basically targetting the iPad. We need to massage the
-	// background image since Mobile Safari can’t display a single large
-	// background image.
-	// html
-	// 	background-image url('/images/iphone-ipad-watermarks-1024px-screen.png')
-
 @media only screen and (max-width: 1024px)
 	html
-		// background-image url('/images/iphone-ipad-watermarks_01.png'), url('/images/iphone-ipad-watermarks_02.png'), url('/images/iphone-ipad-watermarks_03.png'), url('/images/iphone-ipad-watermarks_04.png')
-		//background-size 2310px 3580px
-
-		// Note, 555px = 1155px (full width) - 600px offset due to offset of first image.
-		// background-position -600px 0px, 555px 0px, -600px 1790px, 555px 1790px
-
 		background-position -200px 0px
 	body
 		width baseLineHeight*16
