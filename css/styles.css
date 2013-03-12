@@ -130,11 +130,11 @@ header #workshop-details {
   margin-left: -3rem;
   padding-left: 36px;
   padding-left: 2.25rem;
-  margin-bottom: 36px;
-  margin-bottom: 2.25rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 header h1,
-header a {
+header #workshop-link a {
   font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
 }
 header h1 {
@@ -150,6 +150,10 @@ header h1 {
 header p {
   margin-bottom: 0px;
   margin-bottom: 0rem;
+}
+header #sale {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 header #subtitle {
   font-weight: 400;
@@ -177,7 +181,7 @@ header .location {
 header #workshop-link {
   text-transform: uppercase;
 }
-header a {
+header #workshop-link a {
   font-size: 26px;
   font-size: 1.625rem;
   padding-bottom: 3px;
@@ -248,7 +252,7 @@ section#about-the-instructor h2 {
   margin-top: 1.5rem;
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
-  font-family: HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif;
+  font-family: HelveticaNeue-CondensedBold, "Helvetica Neue", "Helvetica", sans-serif;
 }
 section#about-the-instructor p {
   font-size: 14px;

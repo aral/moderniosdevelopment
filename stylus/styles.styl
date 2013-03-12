@@ -39,13 +39,16 @@ body
 	margin-right TwoLineHeights
 	max-width kMaxWidthOfMainContent
 
+
 strong
 	font-weight 800
+
 
 a
 	text-decoration none
 	color kAccentColor
 	font-weight 800
+
 
 h2
 	font-size OneLineHeight
@@ -59,12 +62,11 @@ h2
 	margin-left - HalfLineHeight
 	padding-right HalfLineHeight
 	margin-right - HalfLineHeight
-	// box-shadow 	-5px 0 0 0 hsl(0, 0%, 50%), -10px 0 0 0 hsl(0, 0%, 75%), -15px 0 0 0 hsl(0, 0%, 87.5%), -20px 0 0 0 hsl(0, 0%, 93.75%), 5px 0 0 0 hsl(0, 0%, 50%), 10px 0 0 0 hsl(0, 0%, 75%), 15px 0 0 0 hsl(0, 0%, 87.5%), 20px 0 0 0 hsl(0, 0%, 93.75%)
-
 
 
 p
 	margin-bottom HalfLineHeight
+
 
 ul
 	// Hanging bullets.
@@ -130,8 +132,10 @@ footer
 .highlight
 	font-weight 800
 
+
 .first-quote
 	margin-top OneLineHeight
+
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -144,9 +148,9 @@ header
 		border-left HalfLineHeight solid kAccentColor
 		margin-left - TwoLineHeights
 		padding-left OneAndAHalfLineHeights
-		margin-bottom OneAndAHalfLineHeights
+		margin-bottom OneLineHeight
 
-	h1, a
+	h1, #workshop-link a
 		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
 
 	h1
@@ -164,6 +168,9 @@ header
 		// TODO: Find out why this is.
 		//
 		margin-bottom 0
+
+	#sale
+		margin-bottom OneLineHeight
 
 	#subtitle
 		font-weight 400
@@ -185,12 +192,12 @@ header
 	#workshop-link
 		text-transform uppercase
 
-	a
-		// display block
-		font-size 26rem
-		padding-bottom 3rem
-		border-bottom 2rem solid kAccentColor
-		line-height OneAndAQuarterLineHeights
+		a
+			// display block
+			font-size 26rem
+			padding-bottom 3rem
+			border-bottom 2rem solid kAccentColor
+			line-height OneAndAQuarterLineHeights
 
 
 section[role="main"]
@@ -207,7 +214,6 @@ section[role="main"]
 	// I don’t want it to be visible for aesthetic reasons.
 	h2:first-of-type
 		display: none
-
 
 
 #venue-map
@@ -244,7 +250,7 @@ section#about-the-instructor
 		line-height OneAndAHalfLineHeights
 		margin-top OneLineHeight
 		margin-bottom HalfLineHeight
-		font-family HelveticaNeue-CondensedBold, "Hevetica Neue", "Helvetica", sans-serif
+		font-family HelveticaNeue-CondensedBold, "Helvetica Neue", "Helvetica", sans-serif
 
 	p
 		font-size 14rem
@@ -350,7 +356,6 @@ section#testimonials
 	html
 		font-size 14px
 		showBaselineGrid(show: no, baseFontSize: 14, showQuarterLineHeightMarks: yes)
-
 
 
 @media only screen and (max-width: 400px)
